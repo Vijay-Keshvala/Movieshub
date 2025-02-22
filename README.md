@@ -76,6 +76,6 @@ Pull requests are welcome! Feel free to open issues for feature requests and bug
 ---
 
 ## 💎 Contact
-For any inquiries, reach out via [your-email@example.com](mailto:keshvalavijay11-@gmail.com).
+For any inquiries, reach out via [keshvalavijay11@gmail.com]
 
 Happy Coding! 🎉
