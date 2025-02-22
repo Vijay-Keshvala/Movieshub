@@ -1,81 +1,84 @@
 # 🎬 Movie Details App
 
-A visually appealing web application that provides detailed information about movies, including their trailers, images, ratings, and genres.
+A dynamic movie details web application that fetches movie data from the TMDB API, displaying information such as movie overview, ratings, genres, trailers, and image galleries.
 
 ---
 
-## 📌 Features
-- Fetch movie details from **The Movie Database (TMDb) API**
-- Display **movie posters, trailers, and additional images**
-- Interactive **image selection** (click to enlarge in trailer section)
-- Responsive **modern UI with TailwindCSS**
-- Dynamic routing with **React Router**
+## 🚀 Features
+
+- 📌 **Movie Details** – Displays movie overview, release date, ratings, and genres.
+- 🎥 **Trailer Section** – Embeds official YouTube trailers.
+- 🖼️ **Image Gallery** – Showcases movie posters and backdrops.
+- 🔄 **Responsive Design** – Fully optimized for mobile and desktop.
+- ⚡ **Smooth UI & Transitions** – Interactive and visually appealing animations.
 
 ---
 
-## 🚀 Installation & Setup
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Vijay-Keshvala/Movieshub.git
-   cd movie-details-app
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server**
-   ```bash
-   npm start
-   ```
-
-4. **Environment Variables**
-   - Create a `.env` file in the root directory and add:
-   ```env
-   REACT_APP_TMDB_API_KEY=your_tmdb_api_key
-   ```
+## 🖥️ Live Demo
+[🔗 Click here to view the live project](#)
 
 ---
 
-## 🖼️ Screenshots
+## 📸 Screenshots
 
-### 🎥 Movie Details Page
-![Movie Details Preview](https://your-image-url.com/preview.png)
-
-### 📽️ Trailer & Images
-![Trailer & Images](https://your-image-url.com/trailer-images.png)
+| Movie Details Page | Trailer & Images |
+|--------------------|------------------|
+| ![Movie Details](screenshots/details.png) | ![Trailer & Images](screenshots/trailer.png) |
 
 ---
 
 ## 🛠️ Tech Stack
-- **React.js**
-- **TailwindCSS**
-- **React Router**
-- **TMDb API**
+
+- **Frontend:** React, Tailwind CSS
+- **Backend:** TMDB API (for fetching movie data)
+- **Routing:** React Router
 
 ---
 
-## 💡 Future Enhancements
-- Add **search functionality**
-- Implement **dark mode**
-- Show **cast & crew details**
+## ⚙️ Installation & Setup
+
+1️⃣ Clone the repository:
+```sh
+ git clone https://github.com/Vijay-Keshvala/Movieshub.git
+```
+
+2️⃣ Navigate to the project directory:
+```sh
+ cd Movieshub
+```
+
+3️⃣ Install dependencies:
+```sh
+ npm install
+```
+
+4️⃣ Start the development server:
+```sh
+ npm start
+```
+
+---
+
+## 🎬 Usage
+
+- Search for a movie using the provided ID in the URL.
+- View movie details, including overview, ratings, genres, and release date.
+- Watch the official trailer.
+- Browse through high-quality movie images.
 
 ---
 
 ## 📜 License
-This project is open-source under the **MIT License**.
+This project is open-source and available under the [MIT License](LICENSE).
 
 ---
 
 ## 🤝 Contributing
-Contributions are welcome! Feel free to submit a PR or open an issue.
+Pull requests are welcome! Feel free to open issues for feature requests and bug fixes.
 
 ---
 
 ## 📩 Contact
-For any queries or feedback, reach out via:
-- **Email**: your-email@example.com
-- **LinkedIn**: [Your Profile](https://linkedin.com/in/yourprofile)
+For any inquiries, reach out via [your-email@example.com](mailto:keshvalavijay11-@gmail.com).
 
+Happy Coding! 🎉
