@@ -8,24 +8,19 @@ A dynamic movie details web application that fetches movie data from the TMDB AP
 
 - 📌 **Movie Details** – Displays movie overview, release date, ratings, and genres.
 - 🎥 **Trailer Section** – Embeds official YouTube trailers.
-- 🖼️ **Image Gallery** – Showcases movie posters and backdrops.
+- 🏰️ **Image Gallery** – Showcases movie posters and backdrops.
 - 🔄 **Responsive Design** – Fully optimized for mobile and desktop.
 - ⚡ **Smooth UI & Transitions** – Interactive and visually appealing animations.
 
 ---
 
-## 🖥️ Live Demo
-[🔗 Click here to view the live project](#)
-
----
-
 ## 📸 Screenshots
 
-| Movie Details Page | Trailer & Images |
-|--------------------|------------------|
-| ![Home Page](screenshots/details.png) | ![Trailer & Images](screenshots/trailer.png) |
-| ![Details Page](screenshots/details.png) | ![Trailer & Images](screenshots/trailer.png) |
-| ![Trailer Page](screenshots/details.png) | ![Trailer & Images](screenshots/trailer.png) |
+| Section | Screenshot |
+|---------|------------|
+| **Movie Details Page** | ![Movie Details](/Movieshub/src/Screenshots/Screenshot%202025-02-22%20at%205.02.20 PM.png) |
+| **Trailer Section** | ![Trailer](/Movieshub/src/Screenshots/Screenshot%202025-02-22%20at%205.02.56 PM.png) |
+| **Image Gallery** | ![Gallery](/Movieshub/src/Screenshots/Screenshot%202025-02-22%20at%205.02.47 PM.png) |
 
 ---
 
@@ -70,7 +65,7 @@ A dynamic movie details web application that fetches movie data from the TMDB AP
 
 ---
 
-## 📜 License
+## 🐟 License
 This project is open-source and available under the [MIT License](LICENSE).
 
 ---
@@ -80,7 +75,7 @@ Pull requests are welcome! Feel free to open issues for feature requests and bug
 
 ---
 
-## 📩 Contact
+## 💎 Contact
 For any inquiries, reach out via [your-email@example.com](mailto:keshvalavijay11-@gmail.com).
 
 Happy Coding! 🎉
