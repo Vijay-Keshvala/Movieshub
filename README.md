@@ -18,9 +18,9 @@ A dynamic movie details web application that fetches movie data from the TMDB AP
 
 | Section | Screenshot |
 |---------|------------|
-| **Movie Details Page** | ![Movie Details](./src/Screenshots/Screenshot%202025-02-22%20at%205.02.20 PM.png) |
+| **Home Page** | ![Movie Details](./src/Screenshots/Screenshot%202025-02-22%20at%205.02.20 PM.png) |
+| **Movie Details Page** | ![Movie Details](./src/Screenshots/Screenshot%202025-02-22%20at%205.02.47 PM.png) |
 | **Trailer Section** | ![Trailer](./src/Screenshots/Screenshot%202025-02-22%20at%205.02.56 PM.png) |
-| **Image Gallery** | ![Gallery](./src/Screenshots/Screenshot%202025-02-22%20at%205.15.17 PM.png) |
 
 ---
 
