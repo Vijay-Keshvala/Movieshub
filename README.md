@@ -1,4 +1,4 @@
-# 🎬 Movie Details App
+# 🎬 Movieshub
 
 A dynamic movie details web application that fetches movie data from the TMDB API, displaying information such as movie overview, ratings, genres, trailers, and image galleries.
 
