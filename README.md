@@ -23,7 +23,9 @@ A dynamic movie details web application that fetches movie data from the TMDB AP
 
 | Movie Details Page | Trailer & Images |
 |--------------------|------------------|
-| ![Movie Details](screenshots/details.png) | ![Trailer & Images](screenshots/trailer.png) |
+| ![Home Page](screenshots/details.png) | ![Trailer & Images](screenshots/trailer.png) |
+| ![Details Page](screenshots/details.png) | ![Trailer & Images](screenshots/trailer.png) |
+| ![Trailer Page](screenshots/details.png) | ![Trailer & Images](screenshots/trailer.png) |
 
 ---
 
