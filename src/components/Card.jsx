@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 
 const Card = () => {
     const [movies, setMovies] = useState([]);
+    const [filteredMovies, setFilteredMovies] = useState([]);
     const [page, setPage] = useState(1);
     const [hoveredMovie, setHoveredMovie] = useState(null);
     const [position, setPosition] = useState({ x: 0, y: 0 });
-    const [typedText, setTypedText] = useState(""); 
+    const [typedText, setTypedText] = useState("");
+    const [searchQuery, setSearchQuery] = useState("");
     const totalPages = 10;
 
     const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=242c1cb70872a139c3f09ebe6949e3da&language=en-US&page=${page}`;
@@ -16,23 +18,28 @@ const Card = () => {
             .then((res) => res.json())
             .then((data) => {
                 setMovies(data.results);
+                setFilteredMovies(data.results);
             })
             .catch((error) => console.error('Error fetching movies:', error));
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }, [page]);
 
-    // Update position on mouse move
+    useEffect(() => {
+        setFilteredMovies(
+            movies.filter(movie => movie.title.toLowerCase().includes(searchQuery.toLowerCase()))
+        );
+    }, [searchQuery, movies]);
+
     const handleMouseMove = (e) => {
         setPosition({ x: e.clientX, y: e.clientY });
     };
 
-    // Typing animation effect
     useEffect(() => {
         if (hoveredMovie) {
             const selectedMovie = movies.find(m => m.id === hoveredMovie);
             if (selectedMovie) {
                 const fullText = selectedMovie.overview ? selectedMovie.overview.slice(0, 100) + "..." : "No overview available.";
-                setTypedText(""); // Reset before typing animation starts
+                setTypedText("");
                 
                 let i = 0;
                 const interval = setInterval(() => {
@@ -42,9 +49,9 @@ const Card = () => {
                     } else {
                         clearInterval(interval);
                     }
-                }, 20); // Adjust typing speed
+                }, 20);
 
-                return () => clearInterval(interval); // Cleanup
+                return () => clearInterval(interval);
             }
         }
     }, [hoveredMovie]);
@@ -54,9 +61,20 @@ const Card = () => {
             <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
                 <h2 className="text-3xl font-bold tracking-tight text-black text-center">🎬 Popular Movies</h2>
 
+                {/* Search Bar */}
+                <div className="mt-6 flex justify-center">
+                    <input
+                        type="text"
+                        placeholder="Search movies..."
+                        className="px-4 py-2 border border-gray-400 rounded-lg w-1/2 text-black focus:outline-none focus:ring-2 focus:ring-blue-600"
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                    />
+                </div>
+
                 {/* Movie Cards */}
                 <div className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-                    {movies.map((movie) => (
+                    {filteredMovies.map((movie) => (
                         <div
                             key={movie.id}
                             className="relative w-full h-96 group cursor-pointer transform transition-all duration-300 hover:scale-105"
@@ -67,7 +85,7 @@ const Card = () => {
                             onMouseMove={handleMouseMove}
                             onMouseLeave={() => {
                                 setHoveredMovie(null);
-                                setTypedText(""); // Reset text when hovering out
+                                setTypedText("");
                             }}
                         >
                             <Link to={`/movie/${movie.id}`}>
@@ -88,14 +106,12 @@ const Card = () => {
                         style={{
                             top: position.y + 20 + "px",
                             left: position.x + 20 + "px",
-                            opacity: hoveredMovie ? 1 : 0, 
+                            opacity: hoveredMovie ? 1 : 0,
                             transition: "opacity 0.3s ease-in-out",
                         }}
                     >
                         <h3 className="text-xl font-bold">{movies.find(m => m.id === hoveredMovie)?.title}</h3>
-                        <p className="text-sm mt-2 text-black leading-relaxed">
-                            {typedText}
-                        </p>
+                        <p className="text-sm mt-2 text-black leading-relaxed">{typedText}</p>
                         <div className="mt-3 flex items-center justify-between">
                             <span className="bg-blue-600 text-white px-3 py-1 rounded-md text-xs">
                                 ⭐ {movies.find(m => m.id === hoveredMovie)?.vote_average?.toFixed(1) || 'N/A'}
